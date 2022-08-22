@@ -26,16 +26,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.parking.dtos.ParkingSpotDto;
 import br.com.parking.models.ParkingSpot;
-import br.com.parking.services.ParkingSpotServices;
+import br.com.parking.services.ParkingSpotService;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/parking-spot")
 public class ParkingSpotController {
 
-	final ParkingSpotServices parkingSpotServices;
+	final ParkingSpotService parkingSpotServices;
 	
-	public ParkingSpotController (ParkingSpotServices parkingSpotServices) {
+	public ParkingSpotController (ParkingSpotService parkingSpotServices) {
 		this.parkingSpotServices = parkingSpotServices;
 	}
 	

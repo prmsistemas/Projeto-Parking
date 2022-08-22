@@ -13,11 +13,11 @@ import br.com.parking.models.ParkingSpot;
 import br.com.parking.repositories.ParkingSpotRepository;
 
 @Service
-public class ParkingSpotServices {
+public class ParkingSpotService {
 
 	final ParkingSpotRepository parkingSpotRepository;
 
-	public ParkingSpotServices(ParkingSpotRepository parkingSpotRepository) {
+	public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
 		this.parkingSpotRepository = parkingSpotRepository;
 	}
 	
