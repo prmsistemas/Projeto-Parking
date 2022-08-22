@@ -1,11 +1,12 @@
 package br.com.parking.services;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import javax.transaction.Transactional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.parking.models.ParkingSpot;
@@ -37,8 +38,8 @@ public class ParkingSpotServices {
 		return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
 	}
 
-	public List<ParkingSpot> findAll() {
-		return parkingSpotRepository.findAll();
+	public Page<ParkingSpot> findAll(Pageable pageable) {
+		return parkingSpotRepository.findAll(pageable);
 	}
 
 	public Optional<ParkingSpot> findById(UUID id) {
