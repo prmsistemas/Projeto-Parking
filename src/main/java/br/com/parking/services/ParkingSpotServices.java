@@ -1,6 +1,8 @@
 package br.com.parking.services;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import javax.transaction.Transactional;
 
@@ -37,6 +39,16 @@ public class ParkingSpotServices {
 
 	public List<ParkingSpot> findAll() {
 		return parkingSpotRepository.findAll();
+	}
+
+	public Optional<ParkingSpot> findById(UUID id) {
+		return parkingSpotRepository.findById(id);
+	}
+
+	@Transactional
+	public void delete(ParkingSpot parkingSpot) {
+		parkingSpotRepository.delete(parkingSpot);
+		
 	}
 	
 	
