@@ -21,7 +21,7 @@ public class ParkingSpotDto {
 	private String modelCar;
 	private String colorCar;
 	private String resposibleName;
-	private String apartament;
+	private String apartment;
 	private String block;
 	
 }
